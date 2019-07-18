@@ -1,4 +1,6 @@
 const path = require('path');
+const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -24,7 +26,11 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [
+          { loader: MiniCssExtractPlugin.loader }, 
+          'css-loader', 
+          'sass-loader'
+        ],
       },
       {
         test: /\.(png|jpg)$/,
@@ -38,4 +44,12 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      cowsay: 'cowsay-browser',
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].css',
+    }),
+  ],
 };
