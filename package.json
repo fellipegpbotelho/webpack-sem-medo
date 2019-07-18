@@ -1,0 +1,29 @@
+{
+  "name": "webpack-sem-medo",
+  "version": "1.0.0",
+  "description": "Aprendendo webpack sem medo",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "watch": "npm run dev -- -w",
+    "prod": "webpack --mode production"
+  },
+  "keywords": ["front-end", "webpack", "babel", "javascript"],
+  "author": "Fellipe Botelho <fellipegpbotelho@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^3.0.0",
+    "file-loader": "^4.0.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6"
+  },
+  "dependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "babel-loader": "^8.0.6",
+    "cowsay-browser": "^1.1.8"
+  }
+}
