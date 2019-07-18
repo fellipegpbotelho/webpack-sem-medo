@@ -3,6 +3,11 @@ const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+  devServer: {
+    contentBase: path.resolve('dist'),
+    compress: true,
+    port: 9000
+  },
   entry: './src/index.js',
   output: {
     path: path.resolve('dist'),
